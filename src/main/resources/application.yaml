@@ -1,0 +1,17 @@
+name: user-service
+
+server:
+  servlet:
+      context-path: /ws/api/${name}/v1
+  port : 5000
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/users
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
